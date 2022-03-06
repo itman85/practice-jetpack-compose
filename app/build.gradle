@@ -60,6 +60,10 @@ dependencies {
     implementation "androidx.compose.runtime:runtime-rxjava2:$compose_version"
     implementation "androidx.constraintlayout:constraintlayout-compose:1.0.0" // constrain layout integrate for compose
 
+    // More about google accompanist: https://medium.com/surfstudio/accompanist-the-first-chord-a-jetpack-compose-library-reviewed-9e007771db70
+    // implementation "com.google.accompanist:accompanist-coil:0.15.0" deprecated -> https://coil-kt.github.io/coil/ or https://github.com/coil-kt/coil
+    implementation "io.coil-kt:coil-compose:2.0.0-rc01"
+
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
