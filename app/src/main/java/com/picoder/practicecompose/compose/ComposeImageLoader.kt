@@ -40,7 +40,7 @@ fun ComposeImages() {
     }
 }
 
-//@Preview
+@Preview
 @Composable
 fun PreviewComposeImages() {
     ComposeImages()
