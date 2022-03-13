@@ -24,6 +24,8 @@ import androidx.constraintlayout.compose.ConstraintSet
 import androidx.constraintlayout.compose.Dimension
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.runtime.getValue
+import com.picoder.practicecompose.compose.MyNavigationDeeplink
+import com.picoder.practicecompose.compose.MyScreensNavigation
 
 
 class MainActivity : AppCompatActivity() {
@@ -34,11 +36,14 @@ class MainActivity : AppCompatActivity() {
         //setContentView(R.layout.activity_main)
         setContent {
             //MainScreen(message = "Hello world")
-            val countViewModel: CountViewModel = viewModel()
+
+            /*val countViewModel: CountViewModel = viewModel()
             val count by countViewModel.count.observeAsState(initial = 0)
             BoxScreen(count) { newCount ->
                 countViewModel.onCountChanged(newCount)
-            }
+            }*/
+            //MyScreensNavigation()
+            MyNavigationDeeplink()
         }
     }
 }
