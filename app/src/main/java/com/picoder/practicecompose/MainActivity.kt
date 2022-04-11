@@ -10,22 +10,13 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.livedata.observeAsState
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.constraintlayout.compose.ConstraintLayout
-import androidx.constraintlayout.compose.ConstraintSet
-import androidx.constraintlayout.compose.Dimension
-import androidx.lifecycle.viewmodel.compose.viewModel
-import androidx.compose.runtime.getValue
-import com.picoder.practicecompose.compose.MyNavigationDeeplink
-import com.picoder.practicecompose.compose.MyScreensNavigation
+import com.picoder.practicecompose.compose.MyNestedNavigationScreens
+import com.picoder.practicecompose.compose.ScreenWithBottomNavigation
 
 
 class MainActivity : AppCompatActivity() {
@@ -34,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_main)
+        this.supportActionBar?.hide() // incase topbar defined in compose, so should hide default actionbar (topbar) of activity, can use theme no title bar instead
         setContent {
             //MainScreen(message = "Hello world")
 
@@ -43,7 +35,10 @@ class MainActivity : AppCompatActivity() {
                 countViewModel.onCountChanged(newCount)
             }*/
             //MyScreensNavigation()
-            MyNavigationDeeplink()
+            // MyNavigationDeeplink()
+            // MyNestedNavigationScreens()
+
+            ScreenWithBottomNavigation()
         }
     }
 }
