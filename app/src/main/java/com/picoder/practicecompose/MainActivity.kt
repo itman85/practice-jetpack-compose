@@ -1,8 +1,8 @@
 package com.picoder.practicecompose
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.compose.setContent
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
@@ -15,8 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.picoder.practicecompose.compose.MyNestedNavigationScreens
-import com.picoder.practicecompose.compose.ScreenWithBottomNavigation
+import com.picoder.practicecompose.compose.MainScreenNavigationTransition
 
 
 class MainActivity : AppCompatActivity() {
@@ -38,7 +37,8 @@ class MainActivity : AppCompatActivity() {
             // MyNavigationDeeplink()
             // MyNestedNavigationScreens()
 
-            ScreenWithBottomNavigation()
+            //ScreenWithBottomNavigation()
+            MainScreenNavigationTransition()
         }
     }
 }

@@ -5,9 +5,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.Home
-import androidx.compose.material.icons.outlined.Notifications
-import androidx.compose.material.icons.outlined.Person
+import androidx.compose.material.icons.outlined.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -111,8 +109,13 @@ fun MyBottomBar(nc: NavHostController) {
     }
 }
 
-sealed class Screen(val route: String, val icon: ImageVector, val title: String) {
-    object Home : Screen("home", Icons.Outlined.Home, "Home")
-    object Profile : Screen("profile", Icons.Outlined.Person, "Profile")
-    object Notification : Screen("notification", Icons.Outlined.Notifications, "Notifications")
+
+sealed class Screen(val route: String, val title: String, val icon: ImageVector){
+    object Home:Screen("home", "Home", Icons.Outlined.Home)
+    object Profile: Screen("profile", "Profile", Icons.Outlined.Person)
+    object Notification : Screen("notification", "Notifications", Icons.Outlined.Notifications)
+    object Cart: Screen("cart", "Cart", Icons.Outlined.ShoppingCart)
+    object Favorites: Screen("favorites", "Favorites", Icons.Outlined.FavoriteBorder)
+    object More: Screen("more", "More", Icons.Outlined.MoreVert)
+    object Contact: Screen("contact", "Contact", Icons.Outlined.Email)
 }
